@@ -1,0 +1,27 @@
+﻿@html.extend('layout', function(model) {
+  @html.block("body", function (model) {
+
+    @if (model.error) {
+      <p class="text-error">Error occurred: @model.error</p>
+    }
+
+	<table class="table table-striped">
+	 <thead>
+      <tr>
+        <th>Book Title</th>
+        <th>Book Author</th>
+      </tr>
+    </thead>
+	   <tbody>
+     
+          @model.books.forEach(function (book) {
+		  <tr>
+		  <td>@book.title</td>
+		  <td>@book.author</td>
+		  </tr>
+          })
+		  </tbody>
+      </table>
+
+    })
+    })

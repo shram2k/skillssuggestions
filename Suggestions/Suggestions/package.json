@@ -1,0 +1,21 @@
+{
+  "name": "suggestions",
+  "version": "0.0.0",
+  "description": "Suggestions",
+  "main": "app.js",
+  "author": {
+    "name": "shram"
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "cron": "^1.1.0",
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "redis": "^2.6.2",
+    "vash": "^0.12.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-nodemon": "^0.4.2"
+  }
+}

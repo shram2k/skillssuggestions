@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "cron": "registry:dt/cron#1.0.9+20160316155526",
+    "express": "registry:dt/express#4.0.0+20160708185218",
+    "node": "registry:dt/node#6.0.0+20160915134512",
+    "redis": "registry:dt/redis#0.12.1+20160818110030"
+  }
+}
