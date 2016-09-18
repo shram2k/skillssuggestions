@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="controllers\apiController.js" />
     <Compile Include="controllers\homeController.js" />
     <Compile Include="controllers\index.js" />
     <Compile Include="data\seedData.js" />

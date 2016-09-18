@@ -208,17 +208,19 @@ var sendRequest = function (path, params, callback) {
  * @return {Object}
  */
 var parseBook = function (data) {
+    //var book = _.pick(data.volumeInfo, [
+    //    'title', 'subtitle', 'authors', 'publisher', 'publishedDate', 'description',
+    //    'industryIdentifiers', 'pageCount', 'printType', 'categories', 'averageRating',
+    //    'ratingsCount', 'maturityRating', 'language'
+    //]);
     var book = _.pick(data.volumeInfo, [
-        'title', 'subtitle', 'authors', 'publisher', 'publishedDate', 'description',
-        'industryIdentifiers', 'pageCount', 'printType', 'categories', 'averageRating',
-        'ratingsCount', 'maturityRating', 'language'
+        'title','authors', 'description'
     ]);
-
     _.extend(book, {
         id: data.id,
         link: data.volumeInfo.canonicalVolumeLink,
         thumbnail: _.get(data, 'volumeInfo.imageLinks.thumbnail'),
-        images: _.pick(data.volumeInfo.imageLinks, ['small', 'medium', 'large', 'extraLarge'])
+        source:'GoogleBooks'
     });
 
     return book;
