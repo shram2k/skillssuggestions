@@ -236,4 +236,16 @@ goglebookservice.getMarketingSuggestions = function (next) {
 
 };
 
+goglebookservice.searchSuggestions = function (interestName, next) {
+
+    search(interestName, function (error, results) {
+        if (!error) {
+            next(null, results);
+        } else {
+            next(error, null);
+        }
+    });
+
+};
+
 })(module.exports);

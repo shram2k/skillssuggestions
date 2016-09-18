@@ -28,5 +28,20 @@
 
 
         });
+
+        app.get("/search/:interestName", function (req, res) {
+            var interestName = req.params.interestName;
+            data.searchSuggestions(interestName, function (err, results) {
+                res.render("marketing", { title: "The Search", error: err, books: results });
+            });
+
+            //app.get("/", function (req, res) {
+            //    res.send("<html><body><h1>Express</h1></body></html>");
+
+
+            //});
+
+
+        });
     };
 })(module.exports);

@@ -16,4 +16,14 @@
             }
         });
     };
+    services.searchSuggestions = function (interestName, next) {
+        goglebookservice.searchSuggestions(interestName, function (err, res) {
+            if (err) {
+                next(err, null);
+            }
+            else {
+                next(null, res);
+            }
+        });
+    };
 })(module.exports);

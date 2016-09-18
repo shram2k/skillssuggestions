@@ -5,7 +5,7 @@
       <p class="text-error">Error occurred: @model.error</p>
     }
 
-		<table class="table table-striped table-hover">
+		<table class="table table-striped table-hover search-result">
 	 <thead>
       <tr>
 		<th></th>
