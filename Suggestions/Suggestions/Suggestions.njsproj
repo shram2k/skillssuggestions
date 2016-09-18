@@ -36,6 +36,7 @@
     <Compile Include="data\seedData.js" />
     <Compile Include="gruntfile.js" />
     <Compile Include="services\bookservice.js" />
+    <Compile Include="services\goglebookservice.js" />
     <Compile Include="services\index.js" />
     <Compile Include="services\redisclient.js" />
     <Compile Include="server.js" />
@@ -46,6 +47,7 @@
     <Content Include="README.md" />
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
+    <Content Include="views\marketing.vash" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="services\" />
@@ -53,6 +55,8 @@
     <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\css\" />
+    <Folder Include="typings\globals\lodash\" />
+    <Folder Include="typings\globals\underscore\" />
     <Folder Include="views\" />
     <Folder Include="Test\" />
     <Folder Include="typings\" />
@@ -66,8 +70,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\cron\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\lodash\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\redis\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\underscore\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
