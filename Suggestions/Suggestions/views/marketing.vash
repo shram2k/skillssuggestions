@@ -19,7 +19,7 @@
           @model.books.forEach(function (book) {
 		  <tr>
 		  <td><img src='@book.thumbnail'/></td>
-		  <td><a href='@book.link'>@book.title</a></td>
+		  <td><a href='@book.link' target='_blank'>@book.title</a></td>
 		  <td>@book.authors</td>
 		  </tr>
           })
