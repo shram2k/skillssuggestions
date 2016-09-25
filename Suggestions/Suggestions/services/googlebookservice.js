@@ -4,7 +4,7 @@
 //module.exports.search = search;
 //module.exports.lookup = lookup;
 
-(function (goglebookservice) {
+(function (googlebookservice) {
 
 var https = require('https');
 var _ = require('lodash');
@@ -72,8 +72,8 @@ var search = function (query, options, callback) {
         return callback(new Error('Offset cannot be below 0'));
     }
 
-    if (options.limit < 1 || options.limit > 40) {
-        return callback(new Error('Limit must be between 1 and 40'));
+    if (options.limit < 1 || options.limit >100) {
+        return callback(new Error('Limit must be between 1 and 100'));
     }
 
     // Set any special keywords
@@ -226,7 +226,7 @@ var parseBook = function (data) {
     return book;
 };
 
-goglebookservice.getMarketingSuggestions = function (next) {
+    googlebookservice.getMarketingSuggestions = function (next) {
 
     search('marketing', function (error, results) {
         if (!error) {
@@ -238,7 +238,7 @@ goglebookservice.getMarketingSuggestions = function (next) {
 
 };
 
-goglebookservice.searchSuggestions = function (interestName, next) {
+    googlebookservice.searchSuggestions = function (interestName, next) {
 
     search(interestName, function (error, results) {
         if (!error) {

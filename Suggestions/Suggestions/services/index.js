@@ -1,13 +1,14 @@
 ﻿(function (services) {
 
     var bookservice = require("./bookservice");
-    var goglebookservice = require("./goglebookservice");
+    var googlebookservice = require("./googlebookservice");
+    var courserabookservice = require("./courserabookservice");
         
     services.getbooks = function (next) {
         next(null, bookservice.getbooks);
     };
     services.getMarketingSuggestions = function (next) {
-        goglebookservice.getMarketingSuggestions(function (err, res) {
+        googlebookservice.getMarketingSuggestions(function (err, res) {
             if (err) {
                 next(err, null);
             }
@@ -17,7 +18,7 @@
         });
     };
     services.searchSuggestions = function (interestName, next) {
-        goglebookservice.searchSuggestions(interestName, function (err, res) {
+        googlebookservice.searchSuggestions(interestName, function (err, res) {
             if (err) {
                 next(err, null);
             }
@@ -26,4 +27,16 @@
             }
         });
     };
+
+    services.searchCourseraSuggestions = function (interestName, next) {
+        courserabookservice.searchSuggestions(interestName, function (err, res) {
+            if (err) {
+                next(err, null);
+            }
+            else {
+                next(null, res);
+            }
+        });
+    };
+
 })(module.exports);

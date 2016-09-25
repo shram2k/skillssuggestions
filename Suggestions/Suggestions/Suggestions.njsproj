@@ -37,7 +37,8 @@
     <Compile Include="data\seedData.js" />
     <Compile Include="gruntfile.js" />
     <Compile Include="services\bookservice.js" />
-    <Compile Include="services\goglebookservice.js" />
+    <Compile Include="services\courserabookservice.js" />
+    <Compile Include="services\googlebookservice.js" />
     <Compile Include="services\index.js" />
     <Compile Include="services\redisclient.js" />
     <Compile Include="server.js" />

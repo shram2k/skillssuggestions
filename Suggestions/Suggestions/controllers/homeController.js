@@ -31,7 +31,7 @@
 
         app.get("/search/:interestName", function (req, res) {
             var interestName = req.params.interestName;
-            data.searchSuggestions(interestName, function (err, results) {
+            data.searchCourseraSuggestions(interestName, function (err, results) {
                 res.render("marketing", { title: "The Search", error: err, books: results });
             });
 
